@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BIOLOGY I</title>
+   <meta charset="utf-8">
+  <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+  <style>
+    
+  </style>
+
+</head>
+<body>
+
+  <div class="Body">
+
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script><br>
+    <!-- *********************************************** -->
+ 
+ 
+         <!--============ START MY BODY =========-->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 1</button><br><br>
+<!-- ====================== 1 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour1"><center><label class="accordionHeading">Vertebrate Zoology</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour1" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                         <p>{% include 'hist.html' %}</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====================== 2 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour2"><center><label class="accordionHeading">Invertebrate Zoology </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour2" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <p>questions</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+      $(function () { $('#collapseFour1').collapse({toggle: false })});
+      $(function () { $('#collapseFour2').collapse({toggle: false })});
+    </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 2</button><br><br>
+<!-- ====================== 11 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour11"><center><label class="accordionHeading"> Animal Physiology</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour11" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                         <p>questions</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====================== 12 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour12"><center><label class="accordionHeading"> Classification Of Organism</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour12" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <p>questions</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script type="text/javascript">
+      $(function () { $('#collapseFour11').collapse({toggle: false })});
+      $(function () { $('#collapseFour12').collapse({toggle: false })});
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!doctype html>
+<html>
+    <head> 
+            <meta charset="utf-8">
+            <title> SMART EDUC</title>
+            <link rel="stylesheet" type="text/css" href="static/css/educ.css"/>
+    <script >
+    // var data_source_url = "http://10.42.0.1:44444/"  
+    var data_source_url = "http://127.0.0.1:5000/" 
+    </script>
+    </head>
+        <body onload="Load_Offline_Data ()" >
+
+
+
+       <div class="Body">
+
+
+         <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <p class="Uniklabel"> UNIVERSITY OF KISUBI</p>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script>
+
+<!--============ START MY BODY ======================= -->
+            <div class="SmrtBrdHead"> 
+                <center>
+                    <label class="HomeIcon">&#9998; 
+                </label>
+                UNIK SMART BOARD 
+                </center>
+            </div><br>
+<!---================================================================-->
+          
+            <div class="RegistryOffice">
+                
+                <div id="RegistryNewBtnDiv">
+                
+                    <label class="WhatsNewBtn" onclick="loadRegistryUpdates()"> What's New </label>
+                </div>
+
+                <div id="saveBtnDIV">
+                
+                    <label class="WhatsNewBtn" onclick="Save_Registry_Data()"> Keep it </label>
+                </div> <br><br>
+                
+                <center><P><strong>Registery Office</strong></center>
+                
+               <p id="UpdateRegistry"> </p>
+    
+            </div>
+<script>
+      function Save_Registry_Data()
+          {
+              var  registery_data = document.getElementById ("UpdateRegistry").innerHTML;
+              localStorage.setItem("registery", registery_data);
+          }
+                    
+</script>
+<script>
+	function loadRegistryUpdates()
+	    {
+	        
+	        var doc1 = new XMLHttpRequest();
+	        doc1.onreadystatechange = function()
+	        {
+	          if (this.readyState == 4 && this.status == 200)
+	              {
+	                  document.getElementById("UpdateRegistry").innerHTML = this.responseText;
+	              }
+	        };
+	        doc1.open("GET",data_source_url + "RegistryUpdate",true);
+	        doc1.send();
+
+	    }
+</script>            
+<!---=======================================================-->
+            <br>
+            <div class="FacultyOffice">
+                
+                <div id="FacultyNewBtnDiv">
+                    <label class="WhatsNewBtn" onclick="loadFacultyUpdates()"> What's New </label>
+                </div>
+                <div id="saveBtnDIV">
+                
+                    <label class="WhatsNewBtn" onclick="Save_Faculty_Data()"> Keep it </label>
+                </div> <br><br>
+                
+                <center><P><strong>Faculty</strong></center>
+                
+                <p id="updateFaculty"> </p>   
+                
+            </div>
+<script>
+      function Save_Faculty_Data()
+          {
+              var  faculty_data = document.getElementById ("updateFaculty").innerHTML;
+              localStorage.setItem("faculty", faculty_data);
+          }
+                    
+</script>
+<script>
+	function loadFacultyUpdates()
+	    {
+	        
+        var doc2 = new XMLHttpRequest();
+        doc2.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("updateFaculty").innerHTML = this.responseText;
+              }
+        };
+        doc2.open("GET",data_source_url + "FacultyUpdate",true);
+        doc2.send();
+
+	    }
+</script>  
+<!---============================================================-->
+            <br>
+            <div class="Guild_Students">
+                
+                 <div id="GuildNewBtnDiv">
+                    <label class="WhatsNewBtn" onclick="loadGuildUpdates()"> What's New </label>
+                </div>
+                <div id="saveBtnDIV">
+                
+                    <label class="WhatsNewBtn" onclick="Save_Guild_Data()"> Keep it </label>
+                </div> <br><br>
+                
+                 <center><P><strong>Guild And <br> Students</strong></center>
+                 
+                    <p id="updateGuild"></p>   
+                
+            </div>
+<!--============================================================--> 
+<script>
+  function Save_Guild_Data()
+      {
+          var  guild_data = document.getElementById ("updateGuild").innerHTML;
+          localStorage.setItem("guild", guild_data);
+      }
+                    
+</script>
+<script>
+	function loadGuildUpdates()
+	    {
+	        
+        var doc3 = new XMLHttpRequest();
+        doc3.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("updateGuild").innerHTML = this.responseText;
+              }
+        };
+        doc3.open("GET",data_source_url + "GuildUpdate",true);
+        doc3.send();
+
+	    }
+</script> 
+
+<script>
+	function Load_Offline_Data ()
+    {
+        // registery
+        document.getElementById("UpdateRegistry").innerHTML = localStorage.getItem("registery");
+        // faculty
+        document.getElementById("updateFaculty").innerHTML = localStorage.getItem("faculty");
+        // guild
+        document.getElementById("updateGuild").innerHTML = localStorage.getItem("guild");
+    }
+</script>
+        </div>
+        <!-- END OF Body div tag -->
+        </body>
+
+</html>

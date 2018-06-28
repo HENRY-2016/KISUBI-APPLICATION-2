@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIT II</title>
+  <meta charset="utf-8">
+	 <link rel="stylesheet" href="static/js/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+  <script >
+    var data_source_url = "http://10.42.0.1:44444/" 
+    // var data_source_url = "http://127.0.0.1:5000/"  
+    </script>
+
+</head>
+<body  class="Body" onclick="Retrive_Past_Papers()">
+    
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script><br>
+
+<!-- ***************************************************** -->
+
+ 
+         <!--============ START MY BODY =========-->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Quarter I</button><br><br>
+<!-- ====================== 1 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour1"><center><label class="accordionHeading">D.S.S</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour1" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                         
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_D_S_S()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_D_S_S()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_D_S_S">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mit_D_S_S()
+      {
+          var  var1 = document.getElementById ("mit_D_S_S").innerHTML;
+          localStorage.setItem("mit_21", var1);
+      }
+                
+</script>
+<script>
+    function Load_mit_D_S_S()
+        {
+            
+            var doc1 = new XMLHttpRequest();
+            doc1.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("mit_D_S_S").innerHTML = this.responseText;
+                      }
+            };
+            doc1.open("GET",data_source_url + "GET_mit_D_S_S",true);
+            doc1.send();
+
+        }
+</script>
+
+<!-- ====================== 2 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour2"><center><label class="accordionHeading">Research Methods</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour2" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====================== 3 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour3"><center><label class="accordionHeading">Computer Applications</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour3" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+      $(function () { $('#collapseFour1').collapse({toggle: false })});
+      $(function () { $('#collapseFour2').collapse({toggle: false })});
+      $(function () { $('#collapseFour3').collapse({toggle: false })});
+    </script>
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Quarter II</button><br><br>
+<!-- ====================== 4 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour4"><center><label class="accordionHeading"> O.O.P  </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour4" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====================== 5 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour5"><center><label class="accordionHeading">Mobile Computing </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour5" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====================== 6 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour6"><center><label class="accordionHeading">Information Security</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour6" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                      <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function () { $('#collapseFour4').collapse({toggle: false })});
+      $(function () { $('#collapseFour5').collapse({toggle: false })});
+      $(function () { $('#collapseFour6').collapse({toggle: false })});
+    </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Quarter II</button><br><br>
+<!-- ====================== 11 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour11"><center><label class="accordionHeading"> Dessertation</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour11" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ====================== 12 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour12"><center><label class="accordionHeading">Multimedia & Graphics</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour12" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+
+<script type="text/javascript">
+  $(function () { $('#collapseFour11').collapse({toggle: false })});
+  $(function () { $('#collapseFour12').collapse({toggle: false })});
+</script>
+<script >
+  function Retrive_Past_Papers()
+  {
+
+
+  }
+</script>
+</body>
+</html>

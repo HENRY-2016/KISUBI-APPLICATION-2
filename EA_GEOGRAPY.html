@@ -1,0 +1,729 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GEOGRAPHY I</title>
+    <meta charset="utf-8">
+   <link rel="stylesheet" href="static/js/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+  <script >
+  var data_source_url = "http://10.42.0.1:44444/" 
+  // var data_source_url = "http://127.0.0.1:5000/"  
+  </script>
+</head>
+<body  class="Body" onload="Retrive_Past_Papers()">
+    
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script><br>
+    <!-- *********************************************** -->
+ 
+ 
+         <!--============ START MY BODY =========-->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 1</button><br><br>
+<!-- ====================== 1 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour1"><center><label class="accordionHeading">Climatology</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour1" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                     <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Climatology()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Climatology()">Save</label>
+                     </div><br><br>                  
+                      <p id="Climatology">New</p> 
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Climatology()
+      {
+          var  var1 = document.getElementById ("Climatology").innerHTML;
+          localStorage.setItem("geo_1", var1);
+      }
+                    
+</script>
+<script>
+function Load_Climatology()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Climatology").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Climatology",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 2 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour2"><center><label class="accordionHeading"> Geomorphology</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour2" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Geomorphology()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Geomorphology()">Save</label>
+                   </div><br><br>                  
+                    <p id="Geomorphology">New</p> 
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Geomorphology()
+      {
+          var  var1 = document.getElementById ("Geomorphology").innerHTML;
+          localStorage.setItem("geo_2", var1);
+      }
+                    
+</script>
+<script>
+function Load_Geomorphology()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Geomorphology").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Geomorphology",true);
+        doc1.send();
+
+    }
+</script>
+
+<!-- ====================== 3 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour3"><center><label class="accordionHeading">  Statistical Data</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour3" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Statistical()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Statistical()">Save</label>
+                     </div><br><br>                  
+                      <p id="Statistical">New</p> 
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Statistical()
+      {
+          var  var1 = document.getElementById ("Statistical").innerHTML;
+          localStorage.setItem("geo_3", var1);
+      }
+                    
+</script>
+<script>
+function Load_Statistical()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Statistical").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Statistical",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 4 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour4"><center><label class="accordionHeading">  Geography of Africa</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour4" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Geog_A()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Geog_A()">Save</label>
+                     </div><br><br>                  
+                      <p id="Geog_A">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Geog_A()
+      {
+          var  var1 = document.getElementById ("Geog_A").innerHTML;
+          localStorage.setItem("geo_4", var1);
+      }
+                    
+</script>
+<script>
+function Load_Geog_A()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Geog_A").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Geog_A",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 5 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour5"><center><label class="accordionHeading"> Geography of Uganda </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour5" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Geog_uganda()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Geog_uganda()">Save</label>
+                     </div><br><br>                  
+                      <p id="Geog_uganda">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Geog_uganda()
+      {
+          var  var1 = document.getElementById ("Geog_uganda").innerHTML;
+          localStorage.setItem("geo_5", var1);
+      }
+                    
+</script>
+<script>
+function Load_Geog_uganda()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Geog_uganda").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Geog_uganda",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 6 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour6"><center><label class="accordionHeading"> Geography of E.Africa </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour6" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Geog_EA()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Geog_EA()">Save</label>
+                     </div><br><br>                  
+                      <p id="Geog_EA">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Geog_EA()
+      {
+          var  var1 = document.getElementById ("Geog_EA").innerHTML;
+          localStorage.setItem("geo_6", var1);
+      }
+                    
+</script>
+<script>
+function Load_Geog_EA()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Geog_EA").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Geog_EA",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 7 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour7"><center><label class="accordionHeading">Geography of W.Europe</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour7" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Geog_WE()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Geog_WE()">Save</label>
+                     </div><br><br>                  
+                      <p id="Geog_WE">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script type="text/javascript">
+  $(function () { $('#collapseFour1').collapse({toggle: false })});
+  $(function () { $('#collapseFour2').collapse({toggle: false })});
+  $(function () { $('#collapseFour3').collapse({toggle: false })});
+  $(function () { $('#collapseFour4').collapse({toggle: false })});
+  $(function () { $('#collapseFour5').collapse({toggle: false })});
+  $(function () { $('#collapseFour6').collapse({toggle: false })});
+  $(function () { $('#collapseFour7').collapse({toggle: false })});
+</script>
+<script>
+  function Save_Geog_WE()
+      {
+          var  var1 = document.getElementById ("Geog_WE").innerHTML;
+          localStorage.setItem("geo_7", var1);
+      }
+                    
+</script>
+<script>
+function Load_Geog_WE()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Geog_WE").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Geog_WE",true);
+        doc1.send();
+
+    }
+</script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 2</button><br><br>
+<!-- ====================== 11 =========== -->
+
+<!-- ====================== 12 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour12"><center><label class="accordionHeading"> Rural Geography</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour12" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Rural_Geog()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Rural_Geog()">Save</label>
+                     </div><br><br>                  
+                      <p id="Rural_Geog">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Rural_Geog()
+      {
+          var  var1 = document.getElementById ("Rural_Geog").innerHTML;
+          localStorage.setItem("geo_8", var1);
+      }
+                    
+</script>
+<script>
+function Load_Rural_Geog()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Rural_Geog").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Rural_Geog",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 13 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour13"><center><label class="accordionHeading"> Teaching Methods </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour13" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Teac_mthds()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Teac_mthds()">Save</label>
+                     </div><br><br>                  
+                      <p id="Teac_mthds">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Teac_mthds()
+      {
+          var  var1 = document.getElementById ("Teac_mthds").innerHTML;
+          localStorage.setItem("geo_9", var1);
+      }
+                    
+</script>
+<script>
+function Load_Teac_mthds()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Teac_mthds").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Teac_mthds",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 14 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour14"><center><label class="accordionHeading">  Population Studies</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour14" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Pop_Studies()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Pop_Studies()">Save</label>
+                     </div><br><br>                  
+                      <p id="Pop_Studies">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Pop_Studies()
+      {
+          var  var1 = document.getElementById ("Pop_Studies").innerHTML;
+          localStorage.setItem("geo_10", var1);
+      }
+                    
+</script>
+<script>
+function Load_Pop_Studies()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Pop_Studies").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Pop_Studies",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 15 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour15"><center><label class="accordionHeading">World Development</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour15" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_W_Development()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_W_Development()">Save</label>
+                     </div><br><br>                  
+                      <p id="W_Development">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_W_Development()
+      {
+          var  var1 = document.getElementById ("Pop_Studies").innerHTML;
+          localStorage.setItem("geo_11", var1);
+      }
+                    
+</script>
+<script>
+function Load_W_Development()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("W_Development").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_W_Development",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 16 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour16"><center><label class="accordionHeading"> Earth's Environment</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour16" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Earth_En()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Earth_En()">Save</label>
+                     </div><br><br>                  
+                      <p id="Earth_En">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Earth_En()
+      {
+          var  var1 = document.getElementById ("Earth_En").innerHTML;
+          localStorage.setItem("geo_12", var1);
+      }
+                    
+</script>
+<script>
+function Load_Earth_En()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Earth_En").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Earth_En",true);
+        doc1.send();
+
+    }
+</script>
+    <!-- ====================== 17 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour17"><center><label class="accordionHeading"> Environment Principles</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour17" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Env_Principles()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Env_Principles()">Save</label>
+                     </div><br><br>                  
+                      <p id="Env_Principles">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Env_Principles()
+      {
+          var  var1 = document.getElementById ("Env_Principles").innerHTML;
+          localStorage.setItem("geo_13", var1);
+      }
+                    
+</script>
+<script>
+function Load_Env_Principles()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Env_Principles").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Env_Principles",true);
+        doc1.send();
+
+    }
+</script>
+    <script type="text/javascript">
+      // $(function () { $('#collapseFour11').collapse({toggle: false })});
+      $(function () { $('#collapseFour12').collapse({toggle: false })});
+      $(function () { $('#collapseFour13').collapse({toggle: false })});
+      $(function () { $('#collapseFour14').collapse({toggle: false })});
+      $(function () { $('#collapseFour15').collapse({toggle: false })});
+      $(function () { $('#collapseFour16').collapse({toggle: false })});
+      $(function () { $('#collapseFour17').collapse({toggle: false })});
+    </script>
+<script>
+  function Retrive_Past_Papers ()
+  {
+  // Climatology
+document.getElementById("Climatology").innerHTML=localStorage.getItem("geo_1");
+// Geomorphology
+document.getElementById("Geomorphology").innerHTML=localStorage.getItem("geo_2");
+// Statistical
+document.getElementById("Statistical").innerHTML=localStorage.getItem("geo_3");
+// Geog_A
+document.getElementById("Geog_A").innerHTML=localStorage.getItem("geo_4");
+// Geog_uganda
+document.getElementById("Geog_uganda").innerHTML=localStorage.getItem("geo_5");
+// Geog_EA
+document.getElementById("Geog_EA").innerHTML=localStorage.getItem("geo_6");
+// Geomorphology
+document.getElementById("Geog_WE").innerHTML=localStorage.getItem("geo_7");
+// Rural_Geog
+document.getElementById("Rural_Geog").innerHTML=localStorage.getItem("geo_8");
+// Teac_mthds
+document.getElementById("Teac_mthds").innerHTML=localStorage.getItem("geo_9");
+// Pop_Studies
+document.getElementById("Pop_Studies").innerHTML=localStorage.getItem("geo_10");
+// W_Development
+document.getElementById("W_Development").innerHTML=localStorage.getItem("geo_11");
+// Earth_En
+document.getElementById("Earth_En").innerHTML=localStorage.getItem("geo_12");
+// Env_Principles
+document.getElementById("Env_Principles").innerHTML=localStorage.getItem("geo_13");
+
+
+  }
+</script>
+</body>
+</html>

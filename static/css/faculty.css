@@ -1,0 +1,283 @@
+
+/* Styling the tabs */
+div.tabs 
+    {
+        overflow: hidden;
+        border: 1px solid #ccc;
+        background-color:#F8F8FF;
+        width: 100%;
+
+
+    }
+
+/* Styling the buttons inside the tabs */
+div.tabs button 
+    {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px
+    }
+
+/* Change background color of buttons on hover */
+div.tabs button.active
+    {
+        background-color: #87CEFA;
+    }
+    
+    
+.tablinks
+    {
+    
+        font-size: 22px;
+        font-weight:bolder;
+        color:#8B4513;
+        font-family:Times New Roman Times, serif;
+    }
+/* Styling the tab content */
+.tabcontent 
+    {
+        display: none;
+        padding: 6px 12px;
+        border-top: none;
+        
+        
+    }
+
+/* Styling my Faculty headings eg head of dept,faculty */
+.FacultyTitle
+    {
+        background-color: #eee;
+        color: black;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border-style: dashed;
+        text-align: left;
+        font-size: 16px;
+        font-weight:bold;
+        color:blue;
+        font-family:Times New Roman Times, serif;
+        transition: 0.4s; 
+    
+    }
+.FacultyTitle.active
+    {
+        background-color: #1E90FF; /*dodger blue*/
+    }
+    
+.FacultyTitle:hover
+    {
+        background-color:  	#B0C4DE;/*lightsteelblue*/
+    }
+    
+.FacultyTitle:after
+     {
+        content: '\002B'; /* plus sign*/
+        color: black;
+        font-weight: bolder;
+        float: right;
+        margin-left: 5px;
+    }
+.FacultyTitle.active:after
+    {
+        content: "\2212"; /* sub sign*/
+    }
+    
+    
+/* Styling my content area */
+.FacultyContents
+    {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+
+
+
+/*styling the faculty names*/
+.Headings
+    {
+        color:blue;
+        font-weight:bold;
+        font-size:large;
+    }
+    
+.Labels
+    {
+        color:black;
+        font-weight:lighter;
+    }
+
+/*faculty lable*/
+.Faculty_Lable
+    {
+        color:blue;
+        font-weight:bold;
+        font-size:large;
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+/*end...............*/
+/* styling faculty biger box*/
+#FacultyBoxDiv
+    {
+        width:100%;
+        height:100%;
+        margin-top:-30px;
+        /*background-color:#2E2E2E;#EED2EE;*/
+        
+    }
+
+#FacSpacTop
+    {
+        /*width:100%;*/
+        height:27px;
+        /*margin-top:-20px;*/
+        /*margin: auto;*/
+        /*margin-right: 10px;       */
+        /*background-color:#EED2EE;*/
+        color:#EED2EE;
+    }
+    
+#ContentDiv
+    {
+        background-color:#E6E6FA;
+        width:250px;
+        height:372px;
+        margin:auto;
+        border-radius:25px;
+        margin-bottom:20px;
+        
+    }
+
+
+.Body
+    {
+        background-color: #5F9EA0;
+        margin-top: 30px;
+
+    }
+
+
+
+/***********************************************************/
+
+/*styling unik icon...........*/
+.imgcontainer {
+    text-align: center;
+    margin 12px 0 12px 0;
+    background-color: #87CEFA;
+    height: 180px;
+}
+.image
+    {
+        /*border-radius: 50%;*/
+        width: 165px;
+        margin-top: -9px;
+        height: 160px;
+        /*margin-left: 0px;*/
+    }
+/*end of image...........*/
+
+  .Uniklabel
+    {
+        color:#F8F8FF;
+        margin-bottom: -48px;
+        margin-left: 58px;
+        font-size:17px;
+        font-weight: bolder;
+    }
+.CloseIcone
+     {
+        font-size:35px;
+        color:white;
+        font-weight:bold; 
+    
+    }
+
+.HomeIcon
+    {
+        font-size:45px;
+        color:black;
+        font-weight:bold;
+
+    }
+.Icons
+    {
+        font-size:30px;
+        color:white;
+        font-weight:bold;
+    
+    }
+    
+    
+.IconsRevise
+    {
+        font-size:40px;
+        color:white;
+        font-weight:bold;
+    
+    }
+
+.header
+    { 
+        position: fixed;
+        height: 100%;
+        width: 0;
+        padding-top: 60px;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 0.5s;
+        background-color:   #F0F8FF; /* of de naigetion*/   
+    }
+    
+.header a
+    {   
+        color:blue;
+        text-decoration:none;
+        transition:0.3s; 
+        display:block;
+        padding:10px 10px;
+        font-size: 20px;
+        font-family:Times New Roman Times, serif;   
+    }
+
+    
+.header a:hover
+    {
+        background-color:#E6E6FA;
+               
+    }
+
+.header .closebtn
+    {
+       
+        position:absolute;
+        right: 2px;
+        margin-left:50px;
+        top:0;
+        font-size:30px; 
+        
+    }
+/* MAIN DIVISIONS */
+
+#main_body
+    {
+        background-color:#87CEFA;
+    }
+ 
+#NaviDiv
+    {
+        background-color:#8B4513;/*saddle brown*/
+        height:66px;
+    }
+
+/**********************************************************************/

@@ -1,0 +1,483 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PYTHICS II</title>
+	 <meta charset="utf-8">
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+  <script >
+  var data_source_url = "http://10.42.0.1:44444/" 
+  // var data_source_url = "http://127.0.0.1:5000/"  
+  </script>
+
+</head>
+<body>
+
+  <div class="Body" onclick="Retrive_Past_Papers()">
+
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script><br>
+    <!-- *********************************************** -->
+ 
+         <!--============ START MY BODY =========-->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 1</button><br><br>
+<!-- ====================== 1 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour1"><center><label class="accordionHeading">Solar Energy</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour1" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Energy()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Energy()">Save</label>
+                   </div><br><br>                  
+                    <p id="Energy">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Energy()
+      {
+          var  var1 = document.getElementById ("Energy").innerHTML;
+          localStorage.setItem("pyhsics_2_1", var1);
+      }
+                    
+</script>
+<script>
+function Load_Energy()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Energy").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Energy",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 2 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour2"><center><label class="accordionHeading">Material Science </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour2" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_M_Science()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_M_Science()">Save</label>
+                   </div><br><br>                  
+                    <p id="M_Science">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_M_Science()
+      {
+          var  var1 = document.getElementById ("M_Science").innerHTML;
+          localStorage.setItem("pyhsics_2_2", var1);
+      }
+                    
+</script>
+<script>
+function Load_M_Science()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("M_Science").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_M_Science",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 3 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour3"><center><label class="accordionHeading"> Electromagnetism I</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour3" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Electromagnetism_I()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Electromagnetism_I()">Save</label>
+                   </div><br><br>                  
+                    <p id="Electromagnetism_I">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Electromagnetism_I()
+      {
+          var  var1 = document.getElementById ("Electromagnetism_I").innerHTML;
+          localStorage.setItem("pyhsics_2_3", var1);
+      }
+                    
+</script>
+<script>
+function Load_Electromagnetism_I()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Electromagnetism_I").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Electromagnetism_I",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 4 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour4"><center><label class="accordionHeading"> Classical mechanics II</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour4" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mechanics_II()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mechanics_II()">Save</label>
+                   </div><br><br>                  
+                    <p id="mechanics_II">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mechanics_II()
+      {
+          var  var1 = document.getElementById ("mechanics_II").innerHTML;
+          localStorage.setItem("pyhsics_2_4", var1);
+      }
+                    
+</script>
+<script>
+function Load_mechanics_II()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("mechanics_II").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_mechanics_II",true);
+        doc1.send();
+
+    }
+</script>
+
+    <script type="text/javascript">
+      $(function () { $('#collapseFour1').collapse({toggle: false })});
+      $(function () { $('#collapseFour2').collapse({toggle: false })});
+      $(function () { $('#collapseFour3').collapse({toggle: false })});
+      $(function () { $('#collapseFour4').collapse({toggle: false })});
+    </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 2</button><br><br>
+<!-- ====================== 11 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour11"><center><label class="accordionHeading"> Electronics  I</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour11" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Electronics_I()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Electronics_I()">Save</label>
+                   </div><br><br>                  
+                    <p id="Electronics_I">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Electronics_I()
+      {
+          var  var1 = document.getElementById ("Electronics_I").innerHTML;
+          localStorage.setItem("pyhsics_2_5", var1);
+      }
+                    
+</script>
+<script>
+function Load_Electronics_I()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Electronics_I").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Electronics_I",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 12 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour12"><center><label class="accordionHeading">  Teaching Methods</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour12" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                      <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_pyh_Teac_Mthds()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_pyh_Teac_Mthds()">Save</label>
+                   </div><br><br>                  
+                    <p id="pyh_Teac_Mthds">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_pyh_Teac_Mthds()
+      {
+          var  var1 = document.getElementById ("pyh_Teac_Mthds").innerHTML;
+          localStorage.setItem("pyhsics_2_6", var1);
+      }
+                    
+</script>
+<script>
+function Load_pyh_Teac_Mthds()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("pyh_Teac_Mthds").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_pyh_Teac_Mthds",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 13 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour13"><center><label class="accordionHeading">  Quantum mechanics I</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour13" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Quantum_I()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Quantum_I()">Save</label>
+                   </div><br><br>                  
+                    <p id="Quantum_I">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Quantum_I()
+      {
+          var  var1 = document.getElementById ("Quantum_I").innerHTML;
+          localStorage.setItem("pyhsics_2_7", var1);
+      }
+                    
+</script>
+<script>
+function Load_Quantum_I()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Quantum_I").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Quantum_I",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 14 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour14"><center><label class="accordionHeading"> Solid state physics I</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour14" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Solid_state()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Solid_state()">Save</label>
+                   </div><br><br>                  
+                    <p id="Solid_state">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+  $(function () { $('#collapseFour11').collapse({toggle: false })});
+  $(function () { $('#collapseFour12').collapse({toggle: false })});
+  $(function () { $('#collapseFour13').collapse({toggle: false })});
+  $(function () { $('#collapseFour14').collapse({toggle: false })});
+</script>
+
+<script>
+  function Save_Solid_state()
+      {
+          var  var1 = document.getElementById ("Solid_state").innerHTML;
+          localStorage.setItem("pyhsics_2_8", var1);
+      }
+                    
+</script>
+<script>
+function Load_Solid_state()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Solid_state").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Solid_state",true);
+        doc1.send();
+
+    }
+</script>
+<script >
+  function Retrive_Past_Papers()
+  {
+
+// Energy
+document.getElementById("Energy").innerHTML=localStorage.getItem("pyhsics_2_1");
+// M_Science
+document.getElementById("M_Science").innerHTML=localStorage.getItem("pyhsics_2_2");
+// Electromagnetism_I
+document.getElementById("Electromagnetism_I").innerHTML=localStorage.getItem("pyhsics_2_3");
+// mechanics_II
+document.getElementById("mechanics_II").innerHTML=localStorage.getItem("pyhsics_2_4");
+// Electronics_I
+document.getElementById("Electronics_I").innerHTML=localStorage.getItem("pyhsics_2_5");
+// pyh_ Teac_Mthds
+document.getElementById("pyh_Teac_Mthds").innerHTML=localStorage.getItem("pyhsics_2_6");
+// Quantum_I
+document.getElementById("Quantum_I").innerHTML=localStorage.getItem("pyhsics_2_7");
+// Solid_state
+document.getElementById("Solid_state").innerHTML=localStorage.getItem("pyhsics_2_8");
+
+
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MIT I</title>
+  <meta charset="utf-8">
+	<link rel="stylesheet" href="static/js/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+<script >
+    var data_source_url = "http://10.42.0.1:44444/" 
+    // var data_source_url = "http://127.0.0.1:5000/"  
+    </script>
+</head>
+<body  class="Body" onclick="Retrive_Past_Papers()">
+    
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script><br>
+
+<!-- ***************************************************** -->
+
+ 
+         <!--============ START MY BODY =========-->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Quarter I</button><br><br>
+<!-- ====================== 1 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour1"><center><label class="accordionHeading"> M.I.S</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour1" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                         
+                   <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_M_I_S()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_M_I_S()">Save</label>
+                   </div><br><br>                  
+                    <p id="M_I_S">New</p>
+
+                  </div>
+            </div>
+        </div>
+    </div>
+     <script>
+      function Save_M_I_S()
+          {
+              var  var1 = document.getElementById ("M_I_S").innerHTML;
+              localStorage.setItem("mit_1", var1);
+          }
+                    
+    </script>
+    <script>
+        function Load_M_I_S()
+            {
+                
+                var doc1 = new XMLHttpRequest();
+                doc1.onreadystatechange = function()
+                {
+                      if (this.readyState == 4 && this.status == 200)
+                          {
+                            document.getElementById("M_I_S").innerHTML = this.responseText;
+                          }
+                };
+                doc1.open("GET",data_source_url + "GET_M_I_S",true);
+                doc1.send();
+
+            }
+    </script>
+<!-- ====================== 2 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour2"><center><label class="accordionHeading">H.R.M</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour2" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_H_R_M()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_H_R_M()">Save</label>
+                   </div><br><br>                  
+                    <p id="H_R_M">New</p>
+                   
+
+              </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function Save_H_R_M()
+          {
+              var  var2 = document.getElementById ("H_R_M").innerHTML;
+              localStorage.setItem("mit_2", var2);
+          }
+                    
+    </script>
+    <script>
+        function Load_H_R_M()
+            {
+                
+                var doc2 = new XMLHttpRequest();
+                doc2.onreadystatechange = function()
+                {
+                      if (this.readyState == 4 && this.status == 200)
+                          {
+                            document.getElementById("H_R_M").innerHTML = this.responseText;
+                          }
+                };
+                doc2.open("GET",data_source_url + "GET_H_R_M",true);
+                doc2.send();
+
+            }
+    </script>
+
+<!-- ====================== 3 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour3"><center><label class="accordionHeading"> Critical Thinking</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour3" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_Thinking()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_Thinking()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_Thinking">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function Save_mit_Thinking()
+          {
+              var  var3 = document.getElementById ("mit_Thinking").innerHTML;
+              localStorage.setItem("mit_3", var3);
+          }
+                    
+    </script>
+    <script>
+        function Load_mit_Thinking()
+            {
+                
+                var doc3 = new XMLHttpRequest();
+                doc3.onreadystatechange = function()
+                {
+                      if (this.readyState == 4 && this.status == 200)
+                          {
+                            document.getElementById("mit_Thinking").innerHTML = this.responseText;
+                          }
+                };
+                doc3.open("GET",data_source_url + "GET_mit_Thinking",true);
+                doc3.send();
+
+            }
+    </script>
+
+<!-- ====================== 4 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour4"><center><label class="accordionHeading">Web Technology</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour4" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_w_Technology()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_w_Technology()">Save</label>
+                   </div><br><br>                  
+                    <p id="w_Technology">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script>
+      function Save_w_Technology()
+          {
+              var  var4 = document.getElementById ("w_Technology").innerHTML;
+              localStorage.setItem("mit_4", var4);
+          }
+                    
+    </script>
+    <script>
+        function Load_w_Technology()
+            {
+                
+                var doc4 = new XMLHttpRequest();
+                doc4.onreadystatechange = function()
+                {
+                      if (this.readyState == 4 && this.status == 200)
+                          {
+                            document.getElementById("w_Technology").innerHTML = this.responseText;
+                          }
+                };
+                doc4.open("GET",data_source_url + "GET_w_Technology",true);
+                doc4.send();
+
+            }
+    </script>
+    <script type="text/javascript">
+      $(function () { $('#collapseFour1').collapse({toggle: false })});
+      $(function () { $('#collapseFour2').collapse({toggle: false })});
+      $(function () { $('#collapseFour3').collapse({toggle: false })});
+      $(function () { $('#collapseFour4').collapse({toggle: false })});
+    </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Quarter II</button><br><br>
+<!-- ====================== 5 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour5"><center><label class="accordionHeading">S.A.D </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour5" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_S_A_D()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_S_A_D()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_S_A_D">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mit_S_A_D()
+      {
+          var  var5 = document.getElementById ("mit_S_A_D").innerHTML;
+          localStorage.setItem("mit_5", var5);
+      }
+                
+</script>
+<script>
+    function Load_mit_S_A_D()
+        {
+            
+            var doc5 = new XMLHttpRequest();
+            doc5.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("mit_S_A_D").innerHTML = this.responseText;
+                      }
+            };
+            doc5.open("GET",data_source_url + "GET_mit_S_A_D",true);
+            doc5.send();
+
+        }
+</script>
+
+<!-- ====================== 6 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour6"><center><label class="accordionHeading">DB.M.S </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour6" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_DBMS()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_DBMS()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_DBMS">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mit_DBMS()
+      {
+          var  var6 = document.getElementById ("mit_DBMS").innerHTML;
+          localStorage.setItem("mit_6", var6);
+      }
+                
+</script>
+<script>
+    function Load_mit_DBMS()
+        {
+            
+            var doc6 = new XMLHttpRequest();
+            doc6.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("mit_DBMS").innerHTML = this.responseText;
+                      }
+            };
+            doc6.open("GET",data_source_url + "GET_mit_DBMS",true);
+            doc6.send();
+
+        }
+</script>
+
+<!-- ====================== 7 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour7"><center><label class="accordionHeading">IT Infrastructure</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour7" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                      <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Infrastructure()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Infrastructure()">Save</label>
+                   </div><br><br>                  
+                    <p id="Infrastructure">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Infrastructure()
+      {
+          var  var7 = document.getElementById ("Infrastructure").innerHTML;
+          localStorage.setItem("mit_7", var7);
+      }
+                
+</script>
+<script>
+    function Load_Infrastructure()
+        {
+            
+            var doc7 = new XMLHttpRequest();
+            doc7.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("Infrastructure").innerHTML = this.responseText;
+                      }
+            };
+            doc7.open("GET",data_source_url + "GET_Infrastructure",true);
+            doc7.send();
+
+        }
+</script>
+
+    <script type="text/javascript">
+      $(function () { $('#collapseFour5').collapse({toggle: false })});
+      $(function () { $('#collapseFour6').collapse({toggle: false })});
+      $(function () { $('#collapseFour7').collapse({toggle: false })});
+    </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Quarter III</button><br><br>
+<!-- ====================== 11 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour11"><center><label class="accordionHeading">Computer Ethics</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour11" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                   <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_Ethics()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_Ethics()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_Ethics">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mit_Ethics()
+      {
+          var  var11 = document.getElementById ("mit_Ethics").innerHTML;
+          localStorage.setItem("mit_11", var11);
+      }
+                
+</script>
+<script>
+    function Load_mit_Ethics()
+        {
+            
+            var doc11 = new XMLHttpRequest();
+            doc11.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("mit_Ethics").innerHTML = this.responseText;
+                      }
+            };
+            doc11.open("GET",data_source_url + "GET_mit_Ethics",true);
+            doc11.send();
+
+        }
+</script>
+
+<!-- ====================== 12 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour12"><center><label class="accordionHeading">I.S programming</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour12" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_programming()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_programming()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_programming">New</p>
+                   
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mit_programming()
+      {
+          var  var12 = document.getElementById ("mit_programming").innerHTML;
+          localStorage.setItem("mit_12", var12);
+      }
+                
+</script>
+<script>
+    function Load_mit_programming()
+        {
+            
+            var doc12 = new XMLHttpRequest();
+            doc12.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("mit_programming").innerHTML = this.responseText;
+                      }
+            };
+            doc12.open("GET",data_source_url + "GET_mit_programming",true);
+            doc12.send();
+
+        }
+</script>
+<!-- ====================== 13 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour13"><center><label class="accordionHeading">E.commecre programming </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour13" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                      <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_mit_commecre()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_mit_commecre()">Save</label>
+                   </div><br><br>                  
+                    <p id="mit_commecre">New</p>
+                   
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_mit_commecre()
+      {
+          var  var13 = document.getElementById ("mit_commecre").innerHTML;
+          localStorage.setItem("mit_13", var13);
+      }
+                
+</script>
+<script>
+    function Load_mit_commecre()
+        {
+            
+            var doc13 = new XMLHttpRequest();
+            doc13.onreadystatechange = function()
+            {
+                  if (this.readyState == 4 && this.status == 200)
+                      {
+                        document.getElementById("mit_commecre").innerHTML = this.responseText;
+                      }
+            };
+            doc13.open("GET",data_source_url + "GET_mit_commecre",true);
+            doc13.send();
+
+        }
+</script>
+
+<script type="text/javascript">
+  $(function () { $('#collapseFour11').collapse({toggle: false })});
+  $(function () { $('#collapseFour12').collapse({toggle: false })});
+  $(function () { $('#collapseFour13').collapse({toggle: false })});
+</script>
+
+<script >
+  function Retrive_Past_Papers()
+  {
+
+    // semi 1
+    //  M_I_S
+    document.getElementById("M_I_S").innerHTML=localStorage.getItem("mit_1");
+    //  H_R_M
+    document.getElementById("H_R_M").innerHTML=localStorage.getItem("mit_2");
+    //  mit_Thinking
+    document.getElementById("mit_Thinking").innerHTML=localStorage.getItem("mit_3");
+    //  w_Technology
+    document.getElementById("w_Technology").innerHTML=localStorage.getItem("mit_4");
+    //  mit_S_A_D
+    document.getElementById("mit_S_A_D").innerHTML=localStorage.getItem("mit_5");
+    //  mit_DBMS
+    document.getElementById("mit_DBMS").innerHTML=localStorage.getItem("mit_6");
+    //  Infrastructure
+    document.getElementById("Infrastructure").innerHTML=localStorage.getItem("mit_7");
+    //  mit_Ethics
+    document.getElementById("mit_Ethics").innerHTML=localStorage.getItem("mit_11");
+    //  mit_programming
+    document.getElementById("mit_programming").innerHTML=localStorage.getItem("mit_12");
+    //  mit_commecre
+    document.getElementById("mit_commecre").innerHTML=localStorage.getItem("mit_13");
+
+  }
+</script>
+
+</body>
+</html>

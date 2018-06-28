@@ -1,0 +1,727 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LUGANDA</title>
+	
+  <meta charset="utf-8">
+    <link rel="stylesheet" href="static/js/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+   <script >
+  var data_source_url = "http://10.42.0.1:44444/" 
+  // var data_source_url = "http://127.0.0.1:5000/"  
+  </script>
+
+</head>
+<body  class="Body" onclick="Retrive_Past_Papers()">
+    
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script>
+    <!-- *********************************************** -->
+ 
+ 
+         <!--============ START MY BODY =========-->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <br>
+   <button class="Semistersbtn">Semister 1</button><br><br>
+<!-- ====================== 1 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour1"><center><label class="accordionHeading">Luganda Navols</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour1" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                       <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Luga_Navols()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Luga_Navols()">Save</label>
+                   </div><br><br>                  
+                    <p id="Luga_Navols">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Luga_Navols()
+      {
+          var  var1 = document.getElementById ("Luga_Navols").innerHTML;
+          localStorage.setItem("luga_1", var1);
+      }
+                    
+</script>
+<script>
+function Load_Luga_Navols()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Luga_Navols").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Luga_Navols",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 2 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour2"><center><label class="accordionHeading">Teaching Methods</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour2" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_luga_Teac_mthds()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_luga_Teac_mthds()">Save</label>
+                     </div><br><br>                  
+                      <p id="luga_Teac_mthds">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_luga_Teac_mthds()
+      {
+          var  var1 = document.getElementById ("luga_Teac_mthds").innerHTML;
+          localStorage.setItem("luga_2", var1);
+      }
+                    
+</script>
+<script>
+function Load_luga_Teac_mthds()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("luga_Teac_mthds").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_luga_Teac_mthds",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 3 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour3"><center><label class="accordionHeading">Luganda Principles </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour3" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                      <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_luga_Principles()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_luga_Principles()">Save</label>
+                     </div><br><br>                  
+                      <p id="luga_Principles">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_luga_Principles()
+      {
+          var  var1 = document.getElementById ("luga_Principles").innerHTML;
+          localStorage.setItem("luga_3", var1);
+      }
+                    
+</script>
+<script>
+function Load_luga_Principles()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("luga_Principles").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_luga_Principles",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 4 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour4"><center><label class="accordionHeading">  Luganda Phonology</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour4" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                   <label class="control_lables" onclick="Load_Phonology()">My paper</label>
+                 </div>
+                 <div id="saveBtnDIV">
+                    <label class="control_lables" onclick="Save_Phonology()">Save</label>
+                 </div><br><br>                  
+                  <p id="Phonology">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Phonology()
+      {
+          var  var1 = document.getElementById ("Phonology").innerHTML;
+          localStorage.setItem("luga_4", var1);
+      }
+                    
+</script>
+<script>
+function Load_Phonology()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Phonology").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Phonology",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 5 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour5"><center><label class="accordionHeading"> Structure of Luganda </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour5" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Structure()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Structure()">Save</label>
+                     </div><br><br>                  
+                      <p id="Structure">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Structure()
+      {
+          var  var1 = document.getElementById ("Structure").innerHTML;
+          localStorage.setItem("luga_5", var1);
+      }
+                    
+</script>
+<script>
+function Load_Structure()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Structure").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Structure",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 6 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour6"><center><label class="accordionHeading">Effective Communication </label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour6" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Eff_Communication()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Eff_Communication()">Save</label>
+                     </div><br><br>                  
+                      <p id="Eff_Communication">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Eff_Communication()
+      {
+          var  var1 = document.getElementById ("Eff_Communication").innerHTML;
+          localStorage.setItem("luga_6", var1);
+      }
+                    
+</script>
+<script>
+function Load_Eff_Communication()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Eff_Communication").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Eff_Communication",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 7 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour7"><center><label class="accordionHeading">Luganda Faundamentals</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour7" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_L_Faundamentals()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_L_Faundamentals()">Save</label>
+                     </div><br><br>                  
+                      <p id="L_Faundamentals">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_L_Faundamentals()
+      {
+          var  var1 = document.getElementById ("L_Faundamentals").innerHTML;
+          localStorage.setItem("luga_7", var1);
+      }
+                    
+</script>
+<script>
+function Load_L_Faundamentals()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("L_Faundamentals").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_L_Faundamentals",true);
+        doc1.send();
+
+    }
+</script>
+    <script type="text/javascript">
+      $(function () { $('#collapseFour1').collapse({toggle: false })});
+      $(function () { $('#collapseFour2').collapse({toggle: false })});
+      $(function () { $('#collapseFour3').collapse({toggle: false })});
+      $(function () { $('#collapseFour4').collapse({toggle: false })});
+      $(function () { $('#collapseFour5').collapse({toggle: false })});
+      $(function () { $('#collapseFour6').collapse({toggle: false })});
+      $(function () { $('#collapseFour7').collapse({toggle: false })});
+    </script>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+   <button class="Semistersbtn">Semister 2</button><br><br>
+<!-- ====================== 11 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour11"><center><label class="accordionHeading"> Transformation</label></center></a> </h4>
+        </div>
+        
+        <div id="collapseFour11" class="panel-collapse collapse">
+              <div class="panel-body">
+                    <div id="accordionBckGD">
+                      <div id="Load_paper_Div">
+                     <label class="control_lables" onclick="Load_Transformation()">My paper</label>
+                   </div>
+                   <div id="saveBtnDIV">
+                      <label class="control_lables" onclick="Save_Transformation()">Save</label>
+                   </div><br><br>                  
+                    <p id="Transformation">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Transformation()
+      {
+          var  var1 = document.getElementById ("Transformation").innerHTML;
+          localStorage.setItem("luga_8", var1);
+      }
+                    
+</script>
+<script>
+function Load_Transformation()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Transformation").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Transformation",true);
+        doc1.send();
+
+    }
+</script>
+
+<!-- ====================== 12 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion"
+            href="#collapseFour12"><center><label class="accordionHeading"> Luganda Stylistics</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour12" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Stylistics()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Stylistics()">Save</label>
+                     </div><br><br>                  
+                      <p id="Stylistics">New</p>
+              </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Stylistics()
+      {
+          var  var1 = document.getElementById ("Stylistics").innerHTML;
+          localStorage.setItem("luga_9", var1);
+      }
+                    
+</script>
+<script>
+function Load_Stylistics()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Stylistics").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Stylistics",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 13 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour13"><center><label class="accordionHeading"> Ethnological Study</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour13" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Ethnological()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Ethnological()">Save</label>
+                     </div><br><br>                  
+                      <p id="Ethnological">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Ethnological()
+      {
+          var  var1 = document.getElementById ("Ethnological").innerHTML;
+          localStorage.setItem("luga_10", var1);
+      }
+                    
+</script>
+<script>
+function Load_Ethnological()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Ethnological").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Ethnological",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 14 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour14"><center><label class="accordionHeading">Editing & Publishing</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour14" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                  <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Publishing()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Publishing()">Save</label>
+                     </div><br><br>                  
+                      <p id="Publishing">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Publishing()
+      {
+          var  var1 = document.getElementById ("Publishing").innerHTML;
+          localStorage.setItem("luga_11", var1);
+      }
+                    
+</script>
+<script>
+function Load_Publishing()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Publishing").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Publishing",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 15 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour15"><center><label class="accordionHeading">Assessment & Evalution</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour15" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Evalution()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Evalution()">Save</label>
+                     </div><br><br>                  
+                      <p id="Evalution">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Evalution()
+      {
+          var  var1 = document.getElementById ("Evalution").innerHTML;
+          localStorage.setItem("luga_12", var1);
+      }
+                    
+</script>
+<script>
+function Load_Evalution()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Evalution").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Evalution",true);
+        doc1.send();
+
+    }
+</script>
+<!-- ====================== 16 =========== -->
+    <div class="panel panel-warning">
+        <div class="panel-heading">
+              <h4 class="panel-title">
+              <a data-toggle="collapse" data-parent="#accordion"
+              href="#collapseFour16"><center><label class="accordionHeading"> Philosophical Interpretation</label></center></a> </h4>
+        </div>
+
+        <div id="collapseFour16" class="panel-collapse collapse">
+            <div class="panel-body">
+                  <div id="accordionBckGD">
+                    <div id="Load_paper_Div">
+                       <label class="control_lables" onclick="Load_Philosophical()">My paper</label>
+                     </div>
+                     <div id="saveBtnDIV">
+                        <label class="control_lables" onclick="Save_Philosophical()">Save</label>
+                     </div><br><br>                  
+                      <p id="Philosophical">New</p>
+                  </div>
+            </div>
+        </div>
+    </div>
+<script>
+  function Save_Philosophical()
+      {
+          var  var1 = document.getElementById ("Philosophical").innerHTML;
+          localStorage.setItem("luga_13", var1);
+      }
+                    
+</script>
+<script>
+function Load_Philosophical()
+    {
+        
+        var doc1 = new XMLHttpRequest();
+        doc1.onreadystatechange = function()
+        {
+          if (this.readyState == 4 && this.status == 200)
+              {
+                  document.getElementById("Philosophical").innerHTML = this.responseText;
+              }
+        };
+        doc1.open("GET",data_source_url + "GET_Philosophical",true);
+        doc1.send();
+
+    }
+</script>
+<script type="text/javascript">
+  $(function () { $('#collapseFour11').collapse({toggle: false })});
+  $(function () { $('#collapseFour12').collapse({toggle: false })});
+  $(function () { $('#collapseFour13').collapse({toggle: false })});
+  $(function () { $('#collapseFour14').collapse({toggle: false })});
+  $(function () { $('#collapseFour15').collapse({toggle: false })});
+  $(function () { $('#collapseFour16').collapse({toggle: false })});
+</script>
+<script >
+  function Retrive_Past_Papers ()
+  {
+// Luga_Navols
+document.getElementById("Luga_Navols").innerHTML=localStorage.getItem("luga_1");
+// luga_Teac_mthds
+document.getElementById("luga_Teac_mthds").innerHTML=localStorage.getItem("luga_2");
+// luga_Principles"
+document.getElementById("luga_Principles").innerHTML=localStorage.getItem("luga_3");
+// Phonology
+document.getElementById("Phonology").innerHTML=localStorage.getItem("luga_4");
+// Structure
+document.getElementById("Structure").innerHTML=localStorage.getItem("luga_5");
+// Eff_Communication
+document.getElementById("Eff_Communication").innerHTML=localStorage.getItem("luga_6");
+// L_Faundamentals
+document.getElementById("L_Faundamentals").innerHTML=localStorage.getItem("luga_7");
+// Transformation
+document.getElementById("Transformation").innerHTML=localStorage.getItem("luga_8");
+// Stylistics
+document.getElementById("Stylistics").innerHTML=localStorage.getItem("luga_9");
+// Ethnological
+document.getElementById("Ethnological").innerHTML=localStorage.getItem("luga_10");
+// Publishing
+document.getElementById("Publishing").innerHTML=localStorage.getItem("luga_11");
+//Evalution
+document.getElementById("Evalution").innerHTML=localStorage.getItem("luga_12");
+// Philosophical
+document.getElementById("Philosophical").innerHTML=localStorage.getItem("luga_13");
+  }
+</script>
+</body>
+</html>

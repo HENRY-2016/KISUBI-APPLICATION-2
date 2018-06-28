@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FACULTIES</title>
+  <meta charset="utf-8">
+	 <link rel="stylesheet" href="static/css/bootstrap.min.css">
+  <script src="static/js/jquery.min.js"></script>
+  <script src="static/js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="static/css/revise.css">
+  <style>
+    
+  </style>
+
+</head>
+<body>
+
+  <div class="Body">
+
+       <!--************************************************************** -->
+    <div  id= "Navigetion" class="header">
+<!--========== CLOSE  -->
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNavi()"><label class="CloseIcon">&times;</label></a>
+
+            <!-- unik icon -->
+            <div class="imgcontainer">
+                <br>
+                    <img src="static/img/unik.png" class="image">
+                    
+                </div>
+            <center>
+                <a href="index.html">Help</a>
+                <a href="revise.html">Revise</a>
+                <a href="faculties.html">My Faculty</a>
+                <a href="SmartB.html">Smart Board</a>
+                
+                <a href="cabinate_1.html"> Guild Government</a>
+            <center>
+</div>
+<!-- unik label -->
+    <center><p class="Uniklabel"> UNIVERSITY OF KISUBI</p></center>
+
+    <div id="NaviDiv">
+<!--======= OPEN  =====================-->
+        <span style="font-size:45px;cursor:pointer; color:white;" class="MenuBtn" onclick="openMenus()"><image src="static/img/nav.png" width="52px" height="65px"></image></span>
+    </div>
+    <script>
+        function openMenus()
+            {
+                document.getElementById("Navigetion").style.width = "240px"
+            }
+        function closeNavi ()
+            {
+                document.getElementById("Navigetion").style.width = "0"
+            }    
+    </script>
+
+<!-- ***************************************************** -->
+       <!--============ START MY BODY =========-->
+
+       <img class="Reversi_Box_File_Img" src="static/img/book.png">
+       <p class="Space_only">space</p>
+
+
+
+  <div class="panel panel-warning"> 
+<!-- +++++++++++++++++ICT DPT ++++++++++++++++++++ -->
+      <div class="panel-heading">
+        <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion"
+        href="#collapseFour"><center><label class="accordionHeading">Business & ICT</label></center></a> </h4>
+      </div>
+      
+      <div id="collapseFour" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div id="accordionBckGD">
+                    <center>
+                      <button class="btn btn-success btn-block"><label class="Facultylables">Ict</label></button><br>
+                          <!-- course units -->
+                            <label>Select a course</label><br>
+                            <div class="popup" onclick="mityears()">
+                                <label class="courseUnits">Masters</label><br>
+                                  <span class="popuptext" id="mitPopup">  
+                                            <a href="ICT_MIT_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                            <a href="ICT_MIT_2.html"><label class="yearslable">Year 2</label></a><br>
+                                    </span>
+                                    <script>
+                                       function mityears() {var popup = document.getElementById("mitPopup"); 
+                                       popup.classList.toggle("show"); } 
+                                  </script>
+                             </div><br>
+                      <!-- ==================== BIT ============ -->
+                            <div class="popup" onclick="bityears()">
+                                <label class="courseUnits">BIT</label>
+                                    <span class="popuptext" id="bitPopup">  
+                                          <a href="ICT_BIT_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="ICT_BIT_2.html"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="ICT_BIT_3.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function bityears() {var popup = document.getElementById("bitPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                  <!-- ==================== DIT ============ -->
+                            <div class="popup" onclick="dityears()">
+                                <label class="courseUnits">DIT</label>
+                                    <span class="popuptext" id="ditPopup">  
+                                          <a href="#"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="#"><label class="yearslable">Year 2</label></a><br>
+                                    </span>
+                                    <script>
+                                         function dityears() {var popup = document.getElementById("ditPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                            
+                          <!-- End of course units -->
+
+                      <!-- +++++++++++++++++ BUSINESS DPT ++++++++++++++++++++ -->
+                          <button class="btn btn-success btn-block"><label class="Facultylables">Business</label></button><br>
+                          <!-- course units -->
+                          <!-- ==================== BBM ============ -->
+                          <label>Select a course</label><br>
+                            <div class="popup" onclick="bbmyears()">
+                                <label class="courseUnits">BBM</label><br>
+                                  <span class="popuptext" id="bbmPopup">  
+                                            <a href="BU_BBM_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                            <a href="BU_BBM_2.html"><label class="yearslable">Year 2</label></a><br>
+                                            <a href="BU_BBM_3.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                       function bbmyears() {var popup = document.getElementById("bbmPopup"); 
+                                       popup.classList.toggle("show"); } 
+                                  </script>
+                             </div><br>
+                  <!-- ==================== BBSE ============ -->
+                            <div class="popup" onclick="bbseyears()">
+                                <label class="courseUnits">BBSE</label>
+                                    <span class="popuptext" id="bbsePopup">  
+                                          <a href="BU_BBSE_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="BU_BBSE_2.html"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="BU_BBSE_3.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function bbseyears() {var popup = document.getElementById("bbsePopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                  <!-- ==================== DBM ============ -->
+                            <div class="popup" onclick="dbmyears()">
+                                <label class="courseUnits">DBM</label>
+                                    <span class="popuptext" id="dbmPopup">  
+                                          <a href="BU_DBM_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="BU_DBM_2.html"><label class="yearslable">Year 2</label></a><br>
+                                    </span>
+                                    <script>
+                                         function dbmyears() {var popup = document.getElementById("dbmPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                            
+                    </center>
+                  </div>
+            </div>
+          </div>
+  </div>
+
+<!-- +++++++++++++++++ EDUCATION FACULTY ++++++++++++++++++++ -->
+  <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion"
+        href="#collapseFour2"><center><label class="accordionHeading"> Education </label></center></a> </h4>
+      </div>
+
+      <div id="collapseFour2" class="panel-collapse collapse">
+        <div class="panel-body">
+              <div id="accordionBckGD">
+                  <center>
+                      <button class="btn btn-success btn-block"> <label class="Facultylables">Arts</label></button><br>
+                        <!-- course units -->
+                            <label>Select a course unit</label><br>
+                                <!-- ============  Geography ========= -->
+                                <label class="courseUnits" onclick="GetGEOGRAPY()">Geography</label>
+                                      <script >
+                                    function GetGEOGRAPY() {window.location = "EA_GEOGRAPY.html"} 
+                                      </script>
+                                <br>
+                            <!-- ============  Luganda ========= -->
+                                <label class="courseUnits" onclick="GetLUGANDA()">Luganda</label>
+                                    <script>
+                                      function GetLUGANDA() {window.location = "EA_LUGANDA.html"}
+                                    </script>
+                                <br>
+
+                            <!-- ============  History ========= -->
+                            <label class="courseUnits" onclick="GetHISTORY()">History</label>
+                           
+                                <script>
+                                  function GetHISTORY() {window.location = "EA_HISTORY.html"} 
+                                </script>
+                            <br>
+                            
+                            <!-- ============  English ========= -->
+                            <label class="courseUnits" onclick="GetENGLISH()">English</label>
+                            
+                                <script>
+                                   function GetENGLISH() {window.location = "EA_ENGLISH.html"}
+                                </script>
+                            <br>
+
+                            <!-- ============  Literature ========= -->
+                            <label class="courseUnits" onclick="GetLITERATURE()">Literature</label>
+                               
+                                <script>
+                                  function GetLITERATURE() {window.location = "EA_LITERATURE.html"}
+                                </script>
+                            <br>
+                            <!-- ============  Economics ========= -->
+                            <div class="popup" onclick="Econyears()">
+                                <label class="courseUnits">Economics</label>
+                                    <span class="popuptext" id="EconPopup">  
+                                          <a href="EA_ECONOMICS_1.html"><label class="yearslable">Economics 1 </label></a><br>
+                                          <a href="EA_ECONOMICS_2.html"><label class="yearslable">Economics 2</label></a><br>
+                                          <a href="EA_ECONOMICS_3.html"><label class="yearslable">Economics 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function Econyears() {var popup = document.getElementById("EconPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+
+                            <!-- ============  Religious studies ========= -->
+                            <label class="courseUnits" onclick="GetRELIGIOUS_S()">Religious studies </label>     
+                                <script>
+                                    function GetRELIGIOUS_S() {window.location = "EA_RELIGIOUS_S.html"}
+                                </script>
+                            <br>
+                            
+                            <!-- ============  Computer studies ========= -->
+                            <label class="courseUnits" onclick="GetCOMPUTER()">Computer studies</label>
+                                <script>
+                                  function GetCOMPUTER() {window.location = "EA_COMPUTER.html"} 
+                                </script>
+                            <br>
+                        <!-- End of course units -->
+                      <br>
+                      <button class="btn btn-success btn-block"> <label class="Facultylables">Sciences</label></button><br>
+                        <!-- course units -->
+                            <label>Select a course unit</label><br>
+                                <!-- ============  Physics ========= -->
+                                <div class="popup" onclick="physicsyears()">
+                                <label class="courseUnits">Physics</label>
+                                    <span class="popuptext" id="physicsPopup">  
+                                          <a href="SC_PYHSICS_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="SC_PYHSICS_2.html"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="SC_PYHSICS_3.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function physicsyears() {var popup = document.getElementById("physicsPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                            <!-- ============  Mathmatics ========= -->
+                            <div class="popup" onclick="Mathyears()">
+                                <label class="courseUnits">Mathmatics</label>
+                                    <span class="popuptext" id="MathPopup">  
+                                          <a href="SC_MATHMATICS_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="SC_MATHMATICS_2.html"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="SC_MATHMATICS_3.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function Mathyears() {var popup = document.getElementById("MathPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+
+                            <!-- ============  Mathmatics ========= -->
+                            <div class="popup" onclick="Chemyears()">
+                                <label class="courseUnits">Chemistry</label>
+                                    <span class="popuptext" id="ChemPopup">  
+                                          <a href="SC_CHEMISTRY_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="SC_CHEMISTRY_1.html"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="SC_CHEMISTRY_1.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function Chemyears() {var popup = document.getElementById("ChemPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                            
+                            <!-- ============  Biology ========= -->
+                            <div class="popup" onclick="Bioyears()">
+                                <label class="courseUnits">Biology</label>
+                                    <span class="popuptext" id="BioPopup">  
+                                          <a href="SC_BIOLOGY_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="SC_BIOLOGY_2.html"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="SC_BIOLOGY_3.html"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function Bioyears() {var popup = document.getElementById("BioPopup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                        <!-- End of course units -->
+                      <button class="btn btn-success btn-block" onclick="GetProfessional()"> <label class="Facultylables">Professional courses</label></button>
+                        <script >
+                          function GetProfessional() {window.location = "BO_PROFFESIONAL.html"} 
+                        </script>
+
+                      <br>
+                      <button class="btn btn-success btn-block" onclick="GetINTERDIS()"><label class="Facultylables">Interdisicplinary studies</label></button>
+                      <script >
+                          function GetINTERDIS() {window.location = "BO_INTERDIS.html"} 
+                        </script>
+                  </center>
+                </div>
+          </div>
+      </div>
+  </div>
+
+<!-- +++++++++++++++++ HASS FACULTY ++++++++++++++++++++ -->
+  <div class="panel panel-warning">
+      <div class="panel-heading">
+        <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion"
+        href="#collapseFour3"><center><label class="accordionHeading"> Hass </label></center></a> </h4>
+      </div>
+
+      <div id="collapseFour3" class="panel-collapse collapse">
+        <div class="panel-body">
+              <div id="accordionBckGD">
+                  <center>
+                      <button class="btn btn-success btn-block"><label class="Facultylables">Select a course</label></button><br>
+                          <!-- course units -->
+                            <!-- ==================== masters ============ -->
+                            <div class="popup" onclick="hass_mityears()">
+                                <label class="courseUnits">Masters</label><br>
+                                  <span class="popuptext" id="hass_mitPopup">  
+                                            <a href="HASS_MCPC_1.html"><label class="yearslable">Year 1 </label></a><br>
+                                            <a href="HASS_MCPC_2.html"><label class="yearslable">Year 2</label></a><br>
+                                    </span>
+                                    <script>
+                                       function hass_mityears() {var popup = document.getElementById("hass_mitPopup"); 
+                                       popup.classList.toggle("show"); } 
+                                  </script>
+                             </div><br>
+                      <!-- ==================== BSCP ============ -->
+                            <div class="popup" onclick="bscp_years()">
+                                <label class="courseUnits">BSCP</label>
+                                    <span class="popuptext" id="bscp_Popup">  
+                                          <a href="#"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="#"><label class="yearslable">Year 2</label></a><br>
+                                          <a href="#"><label class="yearslable">Year 3</label></a><br>
+                                    </span>
+                                    <script>
+                                         function bscp_years() {var popup = document.getElementById("bscp_Popup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+                  <!-- ==================== DSWA ============ -->
+                            <div class="popup" onclick="dswa_years()">
+                                <label class="courseUnits">DSWA</label>
+                                    <span class="popuptext" id="dswa_Popup">  
+                                          <a href="#"><label class="yearslable">Year 1 </label></a><br>
+                                          <a href="#"><label class="yearslable">Year 2</label></a><br>
+                                    </span>
+                                    <script>
+                                         function dswa_years() {var popup = document.getElementById("dswa_Popup"); 
+                                         popup.classList.toggle("show"); } 
+                                    </script>
+                            </div><br>
+              </div>
+        </div>
+      </div>
+  </div>
+  <p class="Space_only">space</p>
+  <script type="text/javascript">
+    $(function () { $('#collapseFour').collapse({toggle: false })});
+    $(function () { $('#collapseFour1').collapse({toggle: false })});
+    $(function () { $('#collapseFour2').collapse({toggle: false })});
+    $(function () { $('#collapseFour3').collapse({toggle: false })});
+  </script>
+  </div> <!-- END OF body div tag -->
+</body>
+</html>
